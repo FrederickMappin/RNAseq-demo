@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/nextflow-io/rnaseq-nf/master/nextflow_schema.json",
+  "title": "rnaseq-nf pipeline parameters",
+  "description": "Proof of concept of a RNA-seq pipeline implemented with Nextflow",
+  "type": "object",
+  "$defs": {
+    "input_output_options": {
+      "title": "Input/output options",
+      "type": "object",
+      "fa_icon": "fas fa-terminal",
+      "description": "Define where the pipeline should find input data and save output data.",
+      "properties": {
+        "outdir": {
+          "type": "string",
+          "format": "directory-path",
+          "description": "The output directory where the results will be saved. You have to use absolute paths to storage on Cloud infrastructure.",
+          "fa_icon": "fas fa-folder-open",
+          "default": "results"
+        },
+        "input": {
+          "type": "string",
+          "format": "file-path",
+          "mimetype": "text/csv",
+          "schema": "assets/schema_input.json",
+          "description": "Path to comma-separated samplesheet file containing sample IDs and paths to FASTQ files.",
+          "help_text": "You will need to create a samplesheet with information about the samples in your experiment before running the pipeline. Use this parameter to specify its location. It has to be a comma-separated file with 3 columns (sample, fastq_1, fastq_2) and a header row.",
+          "fa_icon": "fas fa-file-csv",
+          "default": "${projectDir}/assets/samplesheet.csv"
+        },
+        "transcriptome": {
+          "type": "string",
+          "description": "The input transcriptome file",
+          "fa_icon": "fas fa-folder-open",
+          "default": "${projectDir}/data/ggal/ggal_1_48850000_49020000.Ggal71.500bpflank.fa"
+        },
+        "multiqc": {
+          "type": "string",
+          "fa_icon": "fas fa-folder-open",
+          "default": "${projectDir}/multiqc"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/$defs/input_output_options"
+    }
+  ]
+}

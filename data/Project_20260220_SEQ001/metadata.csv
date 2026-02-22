@@ -1,0 +1,5 @@
+sample_id,project_id,subject_id,tissue_type,cell_type,collection_date,sex,age,disease_status,library_id,library_type,extraction_method,library_kit,input_amount,strand_specific,amplification_cycles,run_id,platform,read_type,read_length,coverage,lane,run_date
+0001,Project_20260220_SEQ001,SUBJ001,gut,Enterocyte,2/1/26,F,34,healthy,LIB001,RNA,Trizol,Illumina TruSeq RNA,100,TRUE,12,RUN001,Illumina NovaSeq,paired-end,150,30,1,2/10/26
+0002,Project_20260220_SEQ001,SUBJ002,liver,Hepatocyte,2/2/26,M,45,diabetes,LIB002,RNA,Trizol,Illumina TruSeq RNA,120,TRUE,11,RUN002,Illumina NovaSeq,paired-end,150,28,1,2/10/26
+0003,Project_20260220_SEQ001,SUBJ003,lung,Alveolar,2/3/26,M,29,healthy,LIB003,RNA,Trizol,Illumina TruSeq RNA,110,TRUE,10,RUN003,Illumina NovaSeq,paired-end,150,32,2,2/11/26
+0004,Project_20260220_SEQ001,SUBJ004,spleen,B cell,2/4/26,F,52,breast cancer,LIB004,RNA,Trizol,Illumina TruSeq RNA,130,TRUE,13,RUN004,Illumina NovaSeq,paired-end,150,27,2,2/11/26

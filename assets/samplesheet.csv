@@ -1,0 +1,5 @@
+sample_id,project_id,fastq_1,fastq_2
+0001,Project_20260220_SEQ001,data/Project_20260220_SEQ001/0001/ggal_gut_1.fq,data/Project_20260220_SEQ001/0001/ggal_gut_2.fq
+0002,Project_20260220_SEQ001,data/Project_20260220_SEQ001/0002/ggal_liver_1.fq,data/Project_20260220_SEQ001/0002/ggal_liver_2.fq
+0003,Project_20260220_SEQ001,data/Project_20260220_SEQ001/0003/ggal_lung_1.fq,data/Project_20260220_SEQ001/0003/ggal_lung_2.fq
+0004,Project_20260220_SEQ001,data/Project_20260220_SEQ001/0004/ggal_spleen_1.fq,data/Project_20260220_SEQ001/0004/ggal_spleen_2.fq

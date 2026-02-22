@@ -1,0 +1,9 @@
+Sample	Unique Reads	Duplicate Reads
+ggal_gut_1	2516.0	421.0
+ggal_gut_2	2521.0	416.0
+ggal_liver_1	2516.0	421.0
+ggal_liver_2	2521.0	416.0
+ggal_lung_1	2516.0	421.0
+ggal_lung_2	2521.0	416.0
+ggal_spleen_1	2516.0	421.0
+ggal_spleen_2	2521.0	416.0

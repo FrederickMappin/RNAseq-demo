@@ -1,0 +1,92 @@
+Version Server Response: Not Found
+### salmon (selective-alignment-based) v1.10.3
+### [ program ] => salmon 
+### [ command ] => quant 
+### [ threads ] => { 2 }
+### [ libType ] => { U }
+### [ index ] => { index }
+### [ mates1 ] => { ggal_liver_1.fq }
+### [ mates2 ] => { ggal_liver_2.fq }
+### [ output ] => { quant_0002 }
+Logs will be written to quant_0002/logs
+[2026-02-22 19:31:45.886] [jointLog] [info] setting maxHashResizeThreads to 2
+[2026-02-22 19:31:45.886] [jointLog] [info] Fragment incompatibility prior below threshold.  Incompatible fragments will be ignored.
+[2026-02-22 19:31:45.886] [jointLog] [info] Usage of --validateMappings implies use of minScoreFraction. Since not explicitly specified, it is being set to 0.65
+[2026-02-22 19:31:45.886] [jointLog] [info] Setting consensusSlack to selective-alignment default of 0.35.
+[2026-02-22 19:31:45.886] [jointLog] [info] parsing read library format
+-----------------------------------------
+| Loading contig table | Time = 73.407 us
+-----------------------------------------
+size = 14
+-----------------------------------------
+| Loading contig offsets | Time = 162.74 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference lengths | Time = 58.417 us
+-----------------------------------------
+-----------------------------------------
+| Loading mphf table | Time = 265.12 us
+-----------------------------------------
+size = 171333
+Number of ones: 13
+Number of ones per inventory item: 512
+Inventory entries filled: 1
+-----------------------------------------
+| Loading contig boundaries | Time = 765.14 us
+-----------------------------------------
+size = 171333
+-----------------------------------------
+| Loading sequence | Time = 267.91 us
+-----------------------------------------
+size = 170943
+-----------------------------------------
+| Loading positions | Time = 709.37 us
+-----------------------------------------
+size = 171001
+-----------------------------------------
+| Loading reference sequence | Time = 221.27 us
+-----------------------------------------
+-----------------------------------------
+| Loading reference accumulative lengths | Time = 39.614 us
+-----------------------------------------
+[2026-02-22 19:31:45.888] [jointLog] [info] There is 1 library.
+[2026-02-22 19:31:45.888] [jointLog] [info] Loading pufferfish index
+[2026-02-22 19:31:45.888] [jointLog] [info] Loading dense pufferfish index.
+[2026-02-22 19:31:45.891] [jointLog] [info] done
+[2026-02-22 19:31:45.956] [jointLog] [info] Index contained 1 targets
+[2026-02-22 19:31:45.956] [jointLog] [info] Number of decoys : 0
+
+
+
+
+
+
+
+
+
+
+
+
+[2026-02-22 19:31:46.007] [jointLog] [info] Computed 1 rich equivalence classes for further processing
+[2026-02-22 19:31:46.007] [jointLog] [info] Counted 1984 total reads in the equivalence classes 
+[2026-02-22 19:31:46.007] [jointLog] [info] Number of mappings discarded because of alignment score : 1505
+[2026-02-22 19:31:46.007] [jointLog] [info] Number of fragments entirely discarded because of alignment score : 948
+[2026-02-22 19:31:46.007] [jointLog] [info] Number of fragments discarded because they are best-mapped to decoys : 0
+[2026-02-22 19:31:46.007] [jointLog] [info] Number of fragments discarded because they have only dovetail (discordant) mappings to valid targets : 1044
+[2026-02-22 19:31:46.007] [jointLog] [warning] Only 1984 fragments were mapped, but the number of burn-in fragments was set to 5000000.
+The effective lengths have been computed using the observed mappings.
+
+[2026-02-22 19:31:46.007] [jointLog] [info] Mapping rate = 67.5519%
+
+[2026-02-22 19:31:46.007] [jointLog] [info] finished quantifyLibrary()
+[2026-02-22 19:31:46.007] [jointLog] [info] Starting optimizer
+[2026-02-22 19:31:46.008] [jointLog] [info] Marked 0 weighted equivalence classes as degenerate
+[2026-02-22 19:31:46.008] [jointLog] [info] iteration = 0 | max rel diff. = 3.43811e-16
+[2026-02-22 19:31:46.008] [jointLog] [info] iteration = 100 | max rel diff. = 0
+[2026-02-22 19:31:46.008] [jointLog] [info] Finished optimizer
+[2026-02-22 19:31:46.008] [jointLog] [info] writing output 
+
+[2026-02-22 19:31:46.009] [jointLog] [warning] NOTE: Read Lib [[ ggal_liver_1.fq, ggal_liver_2.fq]] :
+
+Detected a *potential* strand bias > 1% in an unstranded protocol check the file: quant_0002/lib_format_counts.json for details
+

@@ -1,0 +1,13 @@
+Module	Section	Sample Name	Source
+Salmon	all_sections	quant_0004	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/quant_0004/libParams/flenDist.txt
+Salmon	all_sections	quant_0003	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/quant_0003/libParams/flenDist.txt
+Salmon	all_sections	quant_0001	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/quant_0001/libParams/flenDist.txt
+Salmon	all_sections	quant_0002	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/quant_0002/libParams/flenDist.txt
+FastQC	all_sections	ggal_liver_1	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0002_logs/ggal_liver_1_fastqc.zip
+FastQC	all_sections	ggal_liver_2	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0002_logs/ggal_liver_2_fastqc.zip
+FastQC	all_sections	ggal_spleen_2	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0004_logs/ggal_spleen_2_fastqc.zip
+FastQC	all_sections	ggal_spleen_1	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0004_logs/ggal_spleen_1_fastqc.zip
+FastQC	all_sections	ggal_gut_1	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0001_logs/ggal_gut_1_fastqc.zip
+FastQC	all_sections	ggal_gut_2	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0001_logs/ggal_gut_2_fastqc.zip
+FastQC	all_sections	ggal_lung_2	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0003_logs/ggal_lung_2_fastqc.zip
+FastQC	all_sections	ggal_lung_1	/workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912/fastqc_0003_logs/ggal_lung_1_fastqc.zip

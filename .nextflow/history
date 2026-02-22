@@ -1,0 +1,2 @@
+2026-02-22 19:30:46	-	ecstatic_borg	-	2562b43dd67249a454b4d5febcd1cbae	46fafbc2-911d-4eb3-ae48-8264d1ebc17a	nextflow run main.nf --help
+2026-02-22 19:31:26	27.4s	gigantic_borg	OK	2562b43dd67249a454b4d5febcd1cbae	c5734b45-03eb-4f40-b43e-93225f60f0a8	nextflow run main.nf -profile local_test

@@ -1,0 +1,7 @@
+[2026-02-22 19:31:50,707] multiqc.config                                     [INFO   ]  Loading config settings from: multiqc_config.yaml
+[2026-02-22 19:31:51,113] multiqc.core.version_check                         [WARNING]  MultiQC Version v1.33 now available!
+[2026-02-22 19:31:51,114] multiqc.core.file_search                           [INFO   ]  Search path: /workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912
+[2026-02-22 19:31:51,361] multiqc.modules.salmon.salmon                      [INFO   ]  Found 4 meta reports
+[2026-02-22 19:31:51,362] multiqc.modules.salmon.salmon                      [INFO   ]  Found 4 fragment length distributions
+[2026-02-22 19:31:51,362] multiqc.modules.salmon.salmon                      [INFO   ]  Found 4 library format counts reports
+[2026-02-22 19:31:51,434] multiqc.modules.fastqc.fastqc                      [INFO   ]  Found 8 reports

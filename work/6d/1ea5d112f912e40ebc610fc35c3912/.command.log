@@ -1,0 +1,13 @@
+
+/// MultiQC 🔍 v1.25.2
+
+            config | Loading config settings from: multiqc_config.yaml
+     version_check | MultiQC Version v1.33 now available!
+       file_search | Search path: /workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912
+            salmon | Found 4 meta reports
+            salmon | Found 4 fragment length distributions
+            salmon | Found 4 library format counts reports
+            fastqc | Found 8 reports
+     write_results | Data        : multiqc_report_data
+     write_results | Report      : multiqc_report.html
+           multiqc | MultiQC complete

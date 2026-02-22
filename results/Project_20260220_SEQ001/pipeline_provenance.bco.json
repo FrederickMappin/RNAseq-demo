@@ -1,0 +1,416 @@
+{
+    "object_id": "urn:uuid:1d90aa3f-aae2-4699-8cf3-6f9a0b7d08e7",
+    "spec_version": "https://w3id.org/ieee/ieee-2791-schema/2791object.json",
+    "etag": "fe66ae585b4f6b40278fb54f5a49daa2",
+    "provenance_domain": {
+        "name": "RNASEQ-DEMO",
+        "version": "1.0.0",
+        "created": "2026-02-22T19:31:26.150423177Z",
+        "modified": "2026-02-22T19:31:26.150423177Z",
+        "contributors": [
+            
+        ],
+        "license": ""
+    },
+    "usability_domain": [
+        
+    ],
+    "extension_domain": [
+        
+    ],
+    "description_domain": {
+        "keywords": [
+            
+        ],
+        "platform": [
+            "Nextflow"
+        ],
+        "pipeline_steps": [
+            {
+                "step_number": 1,
+                "name": "b8ca609c22d7074f00000e43dc9e30a4",
+                "description": "RNASEQ:INDEX (ggal_1_48850000_49020000)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/references/ggal_1_48850000_49020000.Ggal71.500bpflank.fa"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/b8/ca609c22d7074f00000e43dc9e30a4/index"
+                    }
+                ]
+            },
+            {
+                "step_number": 2,
+                "name": "66cb3afe48d5c0f35f872b7dd7d5819a",
+                "description": "RNASEQ:FASTQC (Project_20260220_SEQ001/0001)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_2.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_1.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/66/cb3afe48d5c0f35f872b7dd7d5819a/fastqc_0001_logs"
+                    }
+                ]
+            },
+            {
+                "step_number": 3,
+                "name": "2b5066a3446c05251f83e1c1322f0532",
+                "description": "RNASEQ:FASTQC (Project_20260220_SEQ001/0002)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_1.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_2.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/2b/5066a3446c05251f83e1c1322f0532/fastqc_0002_logs"
+                    }
+                ]
+            },
+            {
+                "step_number": 4,
+                "name": "c3ae7d7ae78bab975003567d95230c74",
+                "description": "RNASEQ:FASTQC (Project_20260220_SEQ001/0003)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_2.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_1.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/c3/ae7d7ae78bab975003567d95230c74/fastqc_0003_logs"
+                    }
+                ]
+            },
+            {
+                "step_number": 5,
+                "name": "b47d49b58f25cfd5a5aaff4ea12d473d",
+                "description": "RNASEQ:FASTQC (Project_20260220_SEQ001/0004)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_1.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_2.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/b4/7d49b58f25cfd5a5aaff4ea12d473d/fastqc_0004_logs"
+                    }
+                ]
+            },
+            {
+                "step_number": 6,
+                "name": "857f6c203f3639cbe8758d26b61bbae4",
+                "description": "RNASEQ:QUANT (Project_20260220_SEQ001/0001)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_2.fq"
+                    },
+                    {
+                        "uri": "work/b8/ca609c22d7074f00000e43dc9e30a4/index"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_1.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/85/7f6c203f3639cbe8758d26b61bbae4/quant_0001"
+                    }
+                ]
+            },
+            {
+                "step_number": 7,
+                "name": "e57b144957baa7cf9c5894a1892f0b98",
+                "description": "RNASEQ:QUANT (Project_20260220_SEQ001/0002)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_1.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_2.fq"
+                    },
+                    {
+                        "uri": "work/b8/ca609c22d7074f00000e43dc9e30a4/index"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/e5/7b144957baa7cf9c5894a1892f0b98/quant_0002"
+                    }
+                ]
+            },
+            {
+                "step_number": 8,
+                "name": "b7a69d63da6c96e92b7a0432479a4218",
+                "description": "RNASEQ:QUANT (Project_20260220_SEQ001/0003)",
+                "input_list": [
+                    {
+                        "uri": "work/b8/ca609c22d7074f00000e43dc9e30a4/index"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_2.fq"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_1.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/b7/a69d63da6c96e92b7a0432479a4218/quant_0003"
+                    }
+                ]
+            },
+            {
+                "step_number": 9,
+                "name": "5bc477220e0a504a9ae128b6839ab4bd",
+                "description": "RNASEQ:QUANT (Project_20260220_SEQ001/0004)",
+                "input_list": [
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_1.fq"
+                    },
+                    {
+                        "uri": "work/b8/ca609c22d7074f00000e43dc9e30a4/index"
+                    },
+                    {
+                        "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_2.fq"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/5b/c477220e0a504a9ae128b6839ab4bd/quant_0004"
+                    }
+                ]
+            },
+            {
+                "step_number": 10,
+                "name": "6d1ea5d112f912e40ebc610fc35c3912",
+                "description": "MULTIQC",
+                "input_list": [
+                    {
+                        "uri": "work/c3/ae7d7ae78bab975003567d95230c74/fastqc_0003_logs"
+                    },
+                    {
+                        "uri": "work/5b/c477220e0a504a9ae128b6839ab4bd/quant_0004"
+                    },
+                    {
+                        "uri": "work/b4/7d49b58f25cfd5a5aaff4ea12d473d/fastqc_0004_logs"
+                    },
+                    {
+                        "uri": "work/85/7f6c203f3639cbe8758d26b61bbae4/quant_0001"
+                    },
+                    {
+                        "uri": "work/e5/7b144957baa7cf9c5894a1892f0b98/quant_0002"
+                    },
+                    {
+                        "uri": "work/b7/a69d63da6c96e92b7a0432479a4218/quant_0003"
+                    },
+                    {
+                        "uri": "work/66/cb3afe48d5c0f35f872b7dd7d5819a/fastqc_0001_logs"
+                    },
+                    {
+                        "uri": "work/2b/5066a3446c05251f83e1c1322f0532/fastqc_0002_logs"
+                    },
+                    {
+                        "uri": "multiqc"
+                    }
+                ],
+                "output_list": [
+                    {
+                        "uri": "work/6d/1ea5d112f912e40ebc610fc35c3912/multiqc_report.html"
+                    }
+                ]
+            }
+        ]
+    },
+    "execution_domain": {
+        "script": [
+            "main.nf"
+        ],
+        "script_driver": "nextflow",
+        "software_prerequisites": [
+            {
+                "name": "Nextflow",
+                "version": "25.10.4",
+                "uri": {
+                    "uri": "https://github.com/nextflow-io/nextflow/releases/tag/v25.10.4"
+                }
+            }
+        ],
+        "external_data_endpoints": [
+            
+        ],
+        "environment_variables": {
+            
+        }
+    },
+    "parametric_domain": [
+        {
+            "param": "help",
+            "value": "false",
+            "step": "0"
+        },
+        {
+            "param": "outdir",
+            "value": "results",
+            "step": "0"
+        },
+        {
+            "param": "input",
+            "value": "assets/samplesheet.csv",
+            "step": "0"
+        },
+        {
+            "param": "transcriptome",
+            "value": "data/Project_20260220_SEQ001/references/ggal_1_48850000_49020000.Ggal71.500bpflank.fa",
+            "step": "0"
+        },
+        {
+            "param": "multiqc",
+            "value": "multiqc",
+            "step": "0"
+        }
+    ],
+    "io_domain": {
+        "input_subdomain": [
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/references/ggal_1_48850000_49020000.Ggal71.500bpflank.fa"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_2.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0001/ggal_gut_1.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_1.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0002/ggal_liver_2.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_1.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0004/ggal_spleen_2.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_2.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "data/Project_20260220_SEQ001/0003/ggal_lung_1.fq"
+                }
+            },
+            {
+                "uri": {
+                    "uri": "multiqc"
+                }
+            }
+        ],
+        "output_subdomain": [
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/66/cb3afe48d5c0f35f872b7dd7d5819a/fastqc_0001_logs",
+                    "uri": "results/Project_20260220_SEQ001/0001/fastqc/fastqc_0001_logs"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/2b/5066a3446c05251f83e1c1322f0532/fastqc_0002_logs",
+                    "uri": "results/Project_20260220_SEQ001/0002/fastqc/fastqc_0002_logs"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/b4/7d49b58f25cfd5a5aaff4ea12d473d/fastqc_0004_logs",
+                    "uri": "results/Project_20260220_SEQ001/0004/fastqc/fastqc_0004_logs"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/c3/ae7d7ae78bab975003567d95230c74/fastqc_0003_logs",
+                    "uri": "results/Project_20260220_SEQ001/0003/fastqc/fastqc_0003_logs"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/e5/7b144957baa7cf9c5894a1892f0b98/quant_0002",
+                    "uri": "results/Project_20260220_SEQ001/0002/quant/quant_0002"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/85/7f6c203f3639cbe8758d26b61bbae4/quant_0001",
+                    "uri": "results/Project_20260220_SEQ001/0001/quant/quant_0001"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/b7/a69d63da6c96e92b7a0432479a4218/quant_0003",
+                    "uri": "results/Project_20260220_SEQ001/0003/quant/quant_0003"
+                }
+            },
+            {
+                "mediatype": "",
+                "uri": {
+                    "filename": "work/5b/c477220e0a504a9ae128b6839ab4bd/quant_0004",
+                    "uri": "results/Project_20260220_SEQ001/0004/quant/quant_0004"
+                }
+            },
+            {
+                "mediatype": "text/html",
+                "uri": {
+                    "filename": "work/6d/1ea5d112f912e40ebc610fc35c3912/multiqc_report.html",
+                    "uri": "results/Project_20260220_SEQ001/multiqc/multiqc_report.html"
+                }
+            }
+        ]
+    },
+    "error_domain": {
+        "empirical_error": {
+            
+        },
+        "algorithmic_error": {
+            
+        }
+    }
+}

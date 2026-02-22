@@ -1,0 +1,121 @@
+Feb-22 19:30:41.105 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --help
+Feb-22 19:30:41.231 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Feb-22 19:30:41.384 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/codespace/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Feb-22 19:30:41.524 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-22 19:30:41.526 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-22 19:30:41.529 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Feb-22 19:30:41.637 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Feb-22 19:30:42.257 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-22 19:30:42.320 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /workspaces/RNAseq-demo/nextflow.config
+Feb-22 19:30:42.328 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /workspaces/RNAseq-demo/nextflow.config
+Feb-22 19:30:42.377 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Feb-22 19:30:43.967 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.2.0, nf-prov@1.2.2]
+Feb-22 19:30:43.969 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-22 19:30:43.970 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.2.0, nf-prov@1.2.2]
+Feb-22 19:30:44.688 [main] DEBUG n.plugin.HttpPluginRepository - Registry request: https://registry.nextflow.io/api/v1/plugins/dependencies?plugins=nf-prov%401.2.2%2Cnf-schema%402.2.0&nextflowVersion=25.10.4
+- code: 200
+- body: {"plugins":[{"id":"nf-prov","releases":[{"version":"1.2.2","url":"https://registry.nextflow.io/api/v1/plugins/nf-prov/1.2.2/download/nf-prov-1.2.2.zip","date":"2024-03-27T01:22:33.589795Z","sha512sum":"f50f2e6a362bf6930d79689342e95ce8f992aea8c5b6345eae85d81ced4a63c958bdf9bb4a6eb9c9eb96d24d282c30db80b3154d8d0f7eee7213762af58ec571","requires":">=23.04.0","dependsOn":[],"status":"PUBLISHED"}],"projectUrl":"https://github.com/nextflow-io/nf-prov","provider":"nextflow"},{"id":"nf-schema","releases":[{"version":"2.2.0","url":"https://registry.nextflow.io/api/v1/plugins/nf-schema/2.2.0/download/nf-schema-2.2.0.zip","date":"2024-10-30T10:21:53.008264Z","sha512sum":"3977d51aa1a99ae597fe1aed67fa4cac57ee718121468a7a6920765fc8ea923479224285d77607f04610157d7cd7c430bd2a689f5923efdb9279c6668a44e715","requires":">=23.10.0","dependsOn":[],"status":"PUBLISHED"}],"projectUrl":"https://github.com/nextflow-io/nf-schema","provider":"nextflow-io"}]}
+Feb-22 19:30:44.748 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.2.0
+Feb-22 19:30:44.758 [main] INFO  nextflow.plugin.PluginUpdater - Downloading plugin nf-schema@2.2.0
+Feb-22 19:30:45.429 [main] INFO  org.pf4j.util.FileUtils - Expanded plugin zip 'nf-schema-2.2.0.zip' in 'nf-schema-2.2.0'
+Feb-22 19:30:45.431 [main] DEBUG nextflow.plugin.PluginUpdater - Failed atomic move for plugin /tmp/pf4j-update-downloader7237388345029329744/nf-schema-2.2.0 -> /home/codespace/.nextflow/plugins/nf-schema-2.2.0 - Reason: /tmp/pf4j-update-downloader7237388345029329744/nf-schema-2.2.0 -> /home/codespace/.nextflow/plugins/nf-schema-2.2.0: Invalid cross-device link - Fallback on safe move
+Feb-22 19:30:45.473 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.2.0' resolved
+Feb-22 19:30:45.473 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.2.0'
+Feb-22 19:30:45.478 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.2.0
+Feb-22 19:30:45.479 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-prov version: 1.2.2
+Feb-22 19:30:45.480 [main] INFO  nextflow.plugin.PluginUpdater - Downloading plugin nf-prov@1.2.2
+Feb-22 19:30:45.895 [main] INFO  org.pf4j.util.FileUtils - Expanded plugin zip 'nf-prov-1.2.2.zip' in 'nf-prov-1.2.2'
+Feb-22 19:30:45.896 [main] DEBUG nextflow.plugin.PluginUpdater - Failed atomic move for plugin /tmp/pf4j-update-downloader7285643058139317263/nf-prov-1.2.2 -> /home/codespace/.nextflow/plugins/nf-prov-1.2.2 - Reason: /tmp/pf4j-update-downloader7285643058139317263/nf-prov-1.2.2 -> /home/codespace/.nextflow/plugins/nf-prov-1.2.2: Invalid cross-device link - Fallback on safe move
+Feb-22 19:30:45.913 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-prov@1.2.2' resolved
+Feb-22 19:30:45.913 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-prov@1.2.2'
+Feb-22 19:30:45.916 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-prov@1.2.2
+Feb-22 19:30:45.957 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/codespace/.nextflow/secrets/store.json
+Feb-22 19:30:45.962 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@66522ead] - activable => nextflow.secret.LocalSecretsProvider@66522ead
+Feb-22 19:30:45.968 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-22 19:30:45.988 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [ecstatic_borg] DSL2 - revision: 2562b43dd6
+Feb-22 19:30:46.063 [main] DEBUG nextflow.Session - Session UUID: 46fafbc2-911d-4eb3-ae48-8264d1ebc17a
+Feb-22 19:30:46.063 [main] DEBUG nextflow.Session - Run name: ecstatic_borg
+Feb-22 19:30:46.065 [main] DEBUG nextflow.Session - Executor pool size: 2
+Feb-22 19:30:46.077 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-22 19:30:46.087 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-22 19:30:46.171 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC 
+  System: Linux 6.8.0-1030-azure
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 25.0.1+8-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 11572@codespaces-77c196 [127.0.0.1]
+  CPUs: 2 - Mem: 7.8 GB (178 MB) - Swap: 0 (0)
+Feb-22 19:30:46.231 [main] DEBUG nextflow.Session - Work-dir: /workspaces/RNAseq-demo/work [ext2/ext3]
+Feb-22 19:30:46.232 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspaces/RNAseq-demo/bin
+Feb-22 19:30:46.253 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-22 19:30:46.274 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Feb-22 19:30:46.278 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Feb-22 19:30:46.292 [main] DEBUG nextflow.Session - Observer factory: ProvObserverFactory
+Feb-22 19:30:46.352 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-22 19:30:46.364 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 3; maxThreads: 1000
+Feb-22 19:30:46.513 [main] DEBUG nextflow.Session - Session start
+Feb-22 19:30:47.448 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-22 19:30:47.459 [main] INFO  nextflow.Nextflow - 
+========================================================================================
+                    RNAseq-NF PIPELINE - Help Message
+========================================================================================
+
+  Version  : 1.5.1
+  Docs     : https://github.com/FrederickMappin/rnaseq-nf
+
+Usage:
+  nextflow run main.nf -profile <local_test|batch_test> [options]
+
+========================================================================================
+
+Profiles:
+
+  local_test     Run locally using Docker (rnaseq-nf:1.5.2).
+            All params default to local project paths — no extra args needed.
+
+            nextflow run main.nf -profile local_test
+
+  batch_test     Run on AWS Batch using the ECR image.
+            All params default to the configured S3 paths — no extra args needed.
+
+            nextflow run main.nf -profile batch_test
+
+========================================================================================
+
+Parameters (all have profile defaults — only override if needed):
+
+    --input           Path to samplesheet CSV file.
+                      Columns: sample_id, project_id, fastq_1, fastq_2
+
+    --transcriptome   Path to the transcriptome FASTA file for salmon indexing
+
+    --outdir          Directory where results will be saved
+
+    --multiqc         Path to MultiQC config directory
+
+========================================================================================
+
+Override examples:
+
+  # Local run with a different samplesheet
+  nextflow run main.nf -profile local_test \
+      --input path/to/my_samplesheet.csv
+
+  # Batch run with a custom transcriptome
+  nextflow run main.nf -profile batch_test \
+      --transcriptome s3://my-bucket/refs/transcriptome.fa
+
+========================================================================================
+
+Outputs (written to --outdir/{project_id}/):
+
+  {sample_id}/fastqc/       FastQC reports per sample
+  {sample_id}/quant/        Salmon quantification per sample
+  multiqc/                  Aggregated MultiQC report
+  report.html               Nextflow execution report
+  pipeline_provenance.bco.json  BCO provenance record
+  .nextflow.log             Pipeline run log
+
+========================================================================================
+

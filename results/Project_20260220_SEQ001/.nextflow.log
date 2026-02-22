@@ -1,0 +1,145 @@
+Feb-22 19:31:23.341 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -profile local_test
+Feb-22 19:31:23.492 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.10.4
+Feb-22 19:31:23.537 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/codespace/.nextflow/plugins; core-plugins: nf-amazon@3.4.4,nf-azure@1.20.2,nf-cloudcache@0.5.0,nf-codecommit@0.5.0,nf-console@1.3.0,nf-google@1.23.5,nf-k8s@1.2.2,nf-tower@1.17.5,nf-wave@1.16.1
+Feb-22 19:31:23.584 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-22 19:31:23.585 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-22 19:31:23.589 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Feb-22 19:31:23.616 [main] DEBUG nextflow.util.RetryConfig - Missing nextflow session - using default retry config
+Feb-22 19:31:23.917 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-22 19:31:23.997 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /workspaces/RNAseq-demo/nextflow.config
+Feb-22 19:31:24.007 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /workspaces/RNAseq-demo/nextflow.config
+Feb-22 19:31:24.077 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `local_test`
+Feb-22 19:31:25.040 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [batch_test, local_test]
+Feb-22 19:31:25.111 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins declared=[nf-schema@2.2.0, nf-prov@1.2.2]
+Feb-22 19:31:25.116 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-22 19:31:25.117 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[nf-schema@2.2.0, nf-prov@1.2.2]
+Feb-22 19:31:25.765 [main] DEBUG n.plugin.HttpPluginRepository - Registry request: https://registry.nextflow.io/api/v1/plugins/dependencies?plugins=nf-prov%401.2.2%2Cnf-schema%402.2.0&nextflowVersion=25.10.4
+- code: 200
+- body: {"plugins":[{"id":"nf-prov","releases":[{"version":"1.2.2","url":"https://registry.nextflow.io/api/v1/plugins/nf-prov/1.2.2/download/nf-prov-1.2.2.zip","date":"2024-03-27T01:22:33.589795Z","sha512sum":"f50f2e6a362bf6930d79689342e95ce8f992aea8c5b6345eae85d81ced4a63c958bdf9bb4a6eb9c9eb96d24d282c30db80b3154d8d0f7eee7213762af58ec571","requires":">=23.04.0","dependsOn":[],"status":"PUBLISHED"}],"projectUrl":"https://github.com/nextflow-io/nf-prov","provider":"nextflow"},{"id":"nf-schema","releases":[{"version":"2.2.0","url":"https://registry.nextflow.io/api/v1/plugins/nf-schema/2.2.0/download/nf-schema-2.2.0.zip","date":"2024-10-30T10:21:53.008264Z","sha512sum":"3977d51aa1a99ae597fe1aed67fa4cac57ee718121468a7a6920765fc8ea923479224285d77607f04610157d7cd7c430bd2a689f5923efdb9279c6668a44e715","requires":">=23.10.0","dependsOn":[],"status":"PUBLISHED"}],"projectUrl":"https://github.com/nextflow-io/nf-schema","provider":"nextflow-io"}]}
+Feb-22 19:31:25.833 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-schema version: 2.2.0
+Feb-22 19:31:25.846 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-schema@2.2.0' resolved
+Feb-22 19:31:25.847 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-schema@2.2.0'
+Feb-22 19:31:25.861 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-schema@2.2.0
+Feb-22 19:31:25.862 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-prov version: 1.2.2
+Feb-22 19:31:25.863 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-prov@1.2.2' resolved
+Feb-22 19:31:25.863 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-prov@1.2.2'
+Feb-22 19:31:25.865 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-prov@1.2.2
+Feb-22 19:31:25.888 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/codespace/.nextflow/secrets/store.json
+Feb-22 19:31:25.891 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@77db3d02] - activable => nextflow.secret.LocalSecretsProvider@77db3d02
+Feb-22 19:31:25.902 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 by global default
+Feb-22 19:31:25.928 [main] DEBUG nextflow.cli.CmdRun - Launching `main.nf` [gigantic_borg] DSL2 - revision: 2562b43dd6
+Feb-22 19:31:25.995 [main] DEBUG nextflow.Session - Session UUID: c5734b45-03eb-4f40-b43e-93225f60f0a8
+Feb-22 19:31:25.996 [main] DEBUG nextflow.Session - Run name: gigantic_borg
+Feb-22 19:31:25.997 [main] DEBUG nextflow.Session - Executor pool size: 2
+Feb-22 19:31:26.008 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Feb-22 19:31:26.018 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-22 19:31:26.047 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.10.4 build 11173
+  Created: 10-02-2026 15:17 UTC 
+  System: Linux 6.8.0-1030-azure
+  Runtime: Groovy 4.0.28 on OpenJDK 64-Bit Server VM 25.0.1+8-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 12104@codespaces-77c196 [127.0.0.1]
+  CPUs: 2 - Mem: 7.8 GB (322.7 MB) - Swap: 0 (0)
+Feb-22 19:31:26.084 [main] DEBUG nextflow.Session - Work-dir: /workspaces/RNAseq-demo/work [ext2/ext3]
+Feb-22 19:31:26.085 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /workspaces/RNAseq-demo/bin
+Feb-22 19:31:26.096 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-22 19:31:26.111 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Feb-22 19:31:26.115 [main] DEBUG nextflow.Session - Observer factory (v2): DefaultObserverFactory
+Feb-22 19:31:26.132 [main] DEBUG nextflow.Session - Observer factory: ProvObserverFactory
+Feb-22 19:31:26.215 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-22 19:31:26.228 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 3; maxThreads: 1000
+Feb-22 19:31:26.319 [main] DEBUG nextflow.Session - Session start
+Feb-22 19:31:27.156 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-22 19:31:27.164 [main] DEBUG nextflow.script.IncludeDef - Loading included plugin extensions with names: [validateParameters:validateParameters, paramsSummaryLog:paramsSummaryLog, samplesheetToList:samplesheetToList]; plugin Id: nf-schema
+Feb-22 19:31:28.022 [main] DEBUG nextflow.validation.SchemaValidator - Starting parameters validation
+Feb-22 19:31:28.262 [main] DEBUG nextflow.validation.SchemaEvaluator - Started validating /workspaces/RNAseq-demo/assets/samplesheet.csv
+Feb-22 19:31:28.369 [main] DEBUG nextflow.validation.SchemaEvaluator - Validation of file '/workspaces/RNAseq-demo/assets/samplesheet.csv' passed!
+Feb-22 19:31:28.370 [main] DEBUG nextflow.validation.SchemaValidator - Finishing parameters validation
+Feb-22 19:31:28.382 [main] INFO  nextflow.Nextflow - [1mInput/output options[0m
+  [0;34moutdir         : [0;32m/workspaces/RNAseq-demo/results[0m
+  [0;34mtranscriptome  : [0;32m/workspaces/RNAseq-demo/data/Project_20260220_SEQ001/references/ggal_1_48850000_49020000.Ggal71.500bpflank.fa[0m
+
+[1mCore Nextflow options[0m
+  [0;34mrunName        : [0;32mgigantic_borg[0m
+  [0;34mcontainerEngine: [0;32mdocker[0m
+  [0;34mcontainer      : [0;32mrnaseq-nf:1.5.1[0m
+  [0;34mlaunchDir      : [0;32m/workspaces/RNAseq-demo[0m
+  [0;34mworkDir        : [0;32m/workspaces/RNAseq-demo/work[0m
+  [0;34mprojectDir     : [0;32m/workspaces/RNAseq-demo[0m
+  [0;34muserName       : [0;32mcodespace[0m
+  [0;34mprofile        : [0;32mlocal_test[0m
+  [0;34mconfigFiles    : [0;32m[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+Feb-22 19:31:28.577 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:31:28.579 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:31:28.592 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-22 19:31:28.602 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=2; memory=7.8 GB; capacity=2; pollInterval=100ms; dumpInterval=5m
+Feb-22 19:31:28.607 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Feb-22 19:31:28.640 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:INDEX': maxForks=0; fair=false; array=0
+Feb-22 19:31:28.712 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:31:28.713 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:31:28.714 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:FASTQC': maxForks=0; fair=false; array=0
+Feb-22 19:31:28.726 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:31:28.727 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:31:28.728 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNASEQ:QUANT': maxForks=0; fair=false; array=0
+Feb-22 19:31:28.758 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-22 19:31:28.760 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-22 19:31:28.761 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'MULTIQC': maxForks=0; fair=false; array=0
+Feb-22 19:31:28.776 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, RNASEQ:INDEX, RNASEQ:QUANT, MULTIQC, INDEX, RNASEQ:FASTQC, QUANT
+Feb-22 19:31:28.779 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Feb-22 19:31:28.784 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:INDEX
+Feb-22 19:31:28.790 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:FASTQC
+Feb-22 19:31:28.792 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNASEQ:QUANT
+Feb-22 19:31:28.796 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > MULTIQC
+Feb-22 19:31:28.797 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_20d5c814dd4ed811: /workspaces/RNAseq-demo/modules/multiqc/main.nf
+  Script_c4f21cc3de056d33: /workspaces/RNAseq-demo/modules/index/main.nf
+  Script_99b3a1fe2674c442: /workspaces/RNAseq-demo/main.nf
+  Script_252a1766deb263e0: /workspaces/RNAseq-demo/modules/rnaseq.nf
+  Script_10f9b0c65b3e6a02: /workspaces/RNAseq-demo/modules/fastqc/main.nf
+  Script_ab309835af529b2b: /workspaces/RNAseq-demo/modules/quant/main.nf
+Feb-22 19:31:28.797 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Feb-22 19:31:28.798 [main] DEBUG nextflow.Session - Session await
+Feb-22 19:31:29.097 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:29.101 [Task submitter] INFO  nextflow.Session - [b8/ca609c] Submitted process > RNASEQ:INDEX (ggal_1_48850000_49020000)
+Feb-22 19:31:29.152 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:29.153 [Task submitter] INFO  nextflow.Session - [2b/5066a3] Submitted process > RNASEQ:FASTQC (Project_20260220_SEQ001/0002)
+Feb-22 19:31:31.699 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: RNASEQ:INDEX (ggal_1_48850000_49020000); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/b8/ca609c22d7074f00000e43dc9e30a4]
+Feb-22 19:31:31.702 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-22 19:31:31.733 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:31.734 [Task submitter] INFO  nextflow.Session - [66/cb3afe] Submitted process > RNASEQ:FASTQC (Project_20260220_SEQ001/0001)
+Feb-22 19:31:38.352 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: RNASEQ:FASTQC (Project_20260220_SEQ001/0001); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/66/cb3afe48d5c0f35f872b7dd7d5819a]
+Feb-22 19:31:38.365 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:38.369 [Task submitter] INFO  nextflow.Session - [c3/ae7d7a] Submitted process > RNASEQ:FASTQC (Project_20260220_SEQ001/0003)
+Feb-22 19:31:38.387 [TaskFinalizer-2] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Feb-22 19:31:39.070 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: RNASEQ:FASTQC (Project_20260220_SEQ001/0002); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/2b/5066a3446c05251f83e1c1322f0532]
+Feb-22 19:31:39.103 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:39.105 [Task submitter] INFO  nextflow.Session - [b4/7d49b5] Submitted process > RNASEQ:FASTQC (Project_20260220_SEQ001/0004)
+Feb-22 19:31:45.313 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: RNASEQ:FASTQC (Project_20260220_SEQ001/0004); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/b4/7d49b58f25cfd5a5aaff4ea12d473d]
+Feb-22 19:31:45.395 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: RNASEQ:FASTQC (Project_20260220_SEQ001/0003); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/c3/ae7d7ae78bab975003567d95230c74]
+Feb-22 19:31:45.417 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:45.418 [Task submitter] INFO  nextflow.Session - [e5/7b1449] Submitted process > RNASEQ:QUANT (Project_20260220_SEQ001/0002)
+Feb-22 19:31:46.193 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: RNASEQ:QUANT (Project_20260220_SEQ001/0002); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/e5/7b144957baa7cf9c5894a1892f0b98]
+Feb-22 19:31:46.212 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:46.213 [Task submitter] INFO  nextflow.Session - [85/7f6c20] Submitted process > RNASEQ:QUANT (Project_20260220_SEQ001/0001)
+Feb-22 19:31:46.897 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: RNASEQ:QUANT (Project_20260220_SEQ001/0001); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/85/7f6c203f3639cbe8758d26b61bbae4]
+Feb-22 19:31:46.915 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:46.915 [Task submitter] INFO  nextflow.Session - [b7/a69d63] Submitted process > RNASEQ:QUANT (Project_20260220_SEQ001/0003)
+Feb-22 19:31:47.567 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: RNASEQ:QUANT (Project_20260220_SEQ001/0003); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/b7/a69d63da6c96e92b7a0432479a4218]
+Feb-22 19:31:47.585 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:47.586 [Task submitter] INFO  nextflow.Session - [5b/c47722] Submitted process > RNASEQ:QUANT (Project_20260220_SEQ001/0004)
+Feb-22 19:31:48.458 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: RNASEQ:QUANT (Project_20260220_SEQ001/0004); status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/5b/c477220e0a504a9ae128b6839ab4bd]
+Feb-22 19:31:48.489 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-22 19:31:48.489 [Task submitter] INFO  nextflow.Session - [6d/1ea5d1] Submitted process > MULTIQC
+Feb-22 19:31:52.204 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 10; name: MULTIQC; status: COMPLETED; exit: 0; error: -; workDir: /workspaces/RNAseq-demo/work/6d/1ea5d112f912e40ebc610fc35c3912]
+Feb-22 19:31:52.209 [main] DEBUG nextflow.Session - Session await > all processes finished
+Feb-22 19:31:52.305 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Feb-22 19:31:52.305 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-22 19:31:52.310 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Feb-22 19:31:52.311 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Feb-22 19:31:52.314 [main] INFO  nextflow.Nextflow - 
+Done! Open the following report in your browser --> /workspaces/RNAseq-demo/results/multiqc_report.html
+

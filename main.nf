@@ -171,11 +171,16 @@ workflow {
 
                     try {
                         def provSrc  = file("${workflow.launchDir}/pipeline_provenance.bco.json")
-                        def provDest = file("${projectOutDir}/pipeline_provenance.bco.json")
+                        def provDest = "${projectOutDir}/pipeline_provenance.bco.json"
                         if (provSrc.exists()) {
-                            provDest.parent.mkdirs()
-                            provSrc.moveTo(provDest)
-                            log.info("Moved provenance --> ${provDest}")
+                            def proc = ["aws", "s3", "cp", provSrc.toString(), provDest].execute()
+                            proc.waitFor()
+                            if (proc.exitValue() == 0) {
+                                provSrc.delete()
+                                log.info("Moved provenance --> ${provDest}")
+                            } else {
+                                log.warn("Could not move provenance file: ${proc.err.text}")
+                            }
                         } else {
                             log.warn("Provenance file not found at: ${provSrc}")
                         }
@@ -185,11 +190,16 @@ workflow {
 
                     try {
                         def reportSrc  = file("${workflow.launchDir}/report.html")
-                        def reportDest = file("${projectOutDir}/report.html")
+                        def reportDest = "${projectOutDir}/report.html"
                         if (reportSrc.exists()) {
-                            reportDest.parent.mkdirs()
-                            reportSrc.moveTo(reportDest)
-                            log.info("Moved report --> ${reportDest}")
+                            def proc = ["aws", "s3", "cp", reportSrc.toString(), reportDest].execute()
+                            proc.waitFor()
+                            if (proc.exitValue() == 0) {
+                                reportSrc.delete()
+                                log.info("Moved report --> ${reportDest}")
+                            } else {
+                                log.warn("Could not move report file: ${proc.err.text}")
+                            }
                         } else {
                             log.warn("Report file not found at: ${reportSrc}")
                         }

@@ -146,46 +146,64 @@ workflow {
                 ? "\nDone! Open the following report in your browser --> ${params.outdir}/multiqc_report.html\n"
                 : "Oops .. something went wrong"
         )
-        def pid    = projectId ?: 'unknown'
-        def outdir = params.outdir.toString().replaceAll('/+$', '')
-        def projectOutDir = "${outdir}/${pid}"
 
-        // copy the nextflow log into the project output folder
-        def logSrc  = file("${workflow.launchDir}/.nextflow.log")
-        def logDest = file("${projectOutDir}/.nextflow.log")
-        if (logSrc.exists()) {
-            logDest.parent.mkdirs()
-            logSrc.copyTo(logDest)
-            log.info("Copied log --> ${logDest}")
-        }
-
-        // move provenance and report in a shutdown hook so nf-prov has finished writing first
         try {
-            Runtime.runtime.addShutdownHook(new Thread({
+            def pid    = projectId ?: 'unknown'
+            def outdir = params.outdir.toString().replaceAll('/+$', '')
+            def projectOutDir = "${outdir}/${pid}"
 
-                def provSrc  = file("${workflow.launchDir}/pipeline_provenance.bco.json")
-                def provDest = file("${projectOutDir}/pipeline_provenance.bco.json")
-                if (provSrc.exists()) {
-                    provDest.parent.mkdirs()
-                    provSrc.moveTo(provDest)
-                    log.info("Moved provenance --> ${provDest}")
-                } else {
-                    log.warn("Provenance file not found at: ${provSrc}")
+            // copy the nextflow log into the project output folder
+            try {
+                def logSrc  = file("${workflow.launchDir}/.nextflow.log")
+                def logDest = file("${projectOutDir}/.nextflow.log")
+                if (logSrc.exists()) {
+                    logDest.parent.mkdirs()
+                    logSrc.copyTo(logDest)
+                    log.info("Copied log --> ${logDest}")
                 }
+            } catch (Exception e) {
+                log.warn("Could not copy log file: ${e.message}")
+            }
 
-                def reportSrc  = file("${workflow.launchDir}/report.html")
-                def reportDest = file("${projectOutDir}/report.html")
-                if (reportSrc.exists()) {
-                    reportDest.parent.mkdirs()
-                    reportSrc.moveTo(reportDest)
-                    log.info("Moved report --> ${reportDest}")
-                } else {
-                    log.warn("Report file not found at: ${reportSrc}")
-                }
+            // move provenance and report in a shutdown hook so nf-prov has finished writing first
+            try {
+                Runtime.runtime.addShutdownHook(new Thread({
 
-            } as Runnable))
-        } catch (IllegalStateException e) {
-            log.warn("Could not register shutdown hook for file cleanup: ${e.message}")
+                    try {
+                        def provSrc  = file("${workflow.launchDir}/pipeline_provenance.bco.json")
+                        def provDest = file("${projectOutDir}/pipeline_provenance.bco.json")
+                        if (provSrc.exists()) {
+                            provDest.parent.mkdirs()
+                            provSrc.moveTo(provDest)
+                            log.info("Moved provenance --> ${provDest}")
+                        } else {
+                            log.warn("Provenance file not found at: ${provSrc}")
+                        }
+                    } catch (Exception e) {
+                        log.warn("Could not move provenance file: ${e.message}")
+                    }
+
+                    try {
+                        def reportSrc  = file("${workflow.launchDir}/report.html")
+                        def reportDest = file("${projectOutDir}/report.html")
+                        if (reportSrc.exists()) {
+                            reportDest.parent.mkdirs()
+                            reportSrc.moveTo(reportDest)
+                            log.info("Moved report --> ${reportDest}")
+                        } else {
+                            log.warn("Report file not found at: ${reportSrc}")
+                        }
+                    } catch (Exception e) {
+                        log.warn("Could not move report file: ${e.message}")
+                    }
+
+                } as Runnable))
+            } catch (IllegalStateException e) {
+                log.warn("Could not register shutdown hook for file cleanup: ${e.message}")
+            }
+
+        } catch (Exception e) {
+            log.warn("onComplete handler error: ${e.message}")
         }
     }
 }

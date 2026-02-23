@@ -1,4 +1,4 @@
-# RNAseq-NF
+# RNAseq-Demo
 
 A Nextflow DSL2 pipeline for paired-end RNA-seq quantification using Salmon, with FastQC and MultiQC reporting.
 

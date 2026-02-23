@@ -18,6 +18,7 @@ RUN micromamba install -y -n base \
     bioconda::multiqc=1.25 \
     bioconda::salmon=1.10.3 \
     conda-forge::procps-ng \
+    conda-forge::awscli \
     && micromamba clean -a -y
 
 ENV PATH="$MAMBA_ROOT_PREFIX/bin:$PATH"

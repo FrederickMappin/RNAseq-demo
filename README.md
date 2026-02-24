@@ -60,7 +60,7 @@ All parameters are pre-configured per profile — no extra arguments required fo
 | Profile | Executor | Container | Data location |
 |---|---|---|---|
 | `local_test` | local | `rnaseq-nf:1.4.0` | local project paths |
-| `batch_test` | AWS Batch | ECR (`rnaseq-nf:latest`) | S3 |
+| `batch_test` | AWS Batch | ECR (`rnaseq-nf:v1.1`) | S3 |
 
 ### local_test
 
